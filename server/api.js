@@ -98,7 +98,7 @@ app.post("*/charge", async (req, res) => {
     {
       amount: 10000,
       currency: "usd",
-      description: "Down payment for first access to Accently",
+      description: "Down payment for first access to Breakpoints",
       source: token,
     },
     function (err, charge) {
