@@ -6250,6 +6250,7 @@
   bottom: 0%;
   z-index: 1000;
   display: none;
+  height: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -8547,13 +8548,14 @@
   }
 
   .early-access-popup-email {
-    position: absolute;
+    position: fixed;
     top: 0px;
     bottom: auto;
     display: none;
-    overflow: scroll;
+    overflow: visible;
+    height: 100%;
     padding-top: 0px;
-    padding-bottom: 120px;
+    padding-bottom: 0px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -10791,6 +10793,10 @@
 
   .div-block-464 {
     width: 80%;
+  }
+
+  .text-field-3 {
+    color: #000;
   }
 
   .heading-178 {
