@@ -48,7 +48,7 @@ exports.handler = async (event, context) => {
     console.log("3");
     const eventsData = [serverEvent];
     const eventRequest = (new EventRequest(access_token, pixel_id))
-      .setTestEventCode("TEST21018")
+      //.setTestEventCode("TEST21018")
       .setEvents(eventsData);
 
     console.log("4");
