@@ -9719,7 +9719,7 @@
 
   .image-8 {
     display: block;
-    width: 50%;
+    width: 85%;
     height: auto;
   }
 
@@ -10822,6 +10822,15 @@
 
   .div-block-468 {
     width: 50%;
+  }
+
+  .div-block-469 {
+    width: 50.0000007461967%;
+  }
+
+  .brand-2 {
+    width: 50%;
+    height: 100%;
   }
 }
 
