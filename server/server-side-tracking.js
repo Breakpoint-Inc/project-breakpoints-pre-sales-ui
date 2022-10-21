@@ -29,14 +29,12 @@ exports.handler = async (event, context) => {
   try {
 
     console.log("Event Fired: " + data.eventId);
-    console.log("1");
     const userData = (new UserData())
       .setEmails([email])
       //.setPhones([data.phoneNumber])
       .setClientIpAddress(clientIp)
       .setClientUserAgent(event.headers['user-agent']);
 
-    console.log("2");
     const serverEvent = (new ServerEvent())
       .setEventName(data.eventName)
       .setEventTime(current_timestamp)
@@ -45,13 +43,11 @@ exports.handler = async (event, context) => {
       .setActionSource('website')
       .setEventId(data.eventId);
 
-    console.log("3");
     const eventsData = [serverEvent];
     const eventRequest = (new EventRequest(access_token, pixel_id))
       //.setTestEventCode("TEST21018")
       .setEvents(eventsData);
 
-    console.log("4");
     const response = await eventRequest.execute()
 
     return {
@@ -61,7 +57,6 @@ exports.handler = async (event, context) => {
 
   } catch (err) {
 
-    console.log("11");
     console.log("Error: " + err);
     return {
       statusCode: 400,
